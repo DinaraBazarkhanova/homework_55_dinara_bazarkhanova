@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Article{% endblock %}
+{% block menu %}
+    <a href="{% url 'article_add' %}">Add New Line</a>
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <h1>TO DO</h1>
+        <p><a href="{% url 'index' %}">Home Page</a></p>
+        <p>Title: {{ article.title }}</p>
+        <p>Text: {{ article.text }}</p>
+        <p>Status: {{ article.status }}</p>
+        <p>Deadline: {{ article.deadline }}</p>
+    </div>
+{% endblock %}
